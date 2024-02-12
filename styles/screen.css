@@ -1,3 +1,105 @@
+:root {
+    --border-radius: 15px;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    color: #EAE8FF;
+    background: #2D3142;
+    padding: 0 40px;
+    text-align: left;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 20px;
+    margin:60px ;
+    text-align: center;
+    place-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {  
+    display: grid;
+    background: #e4e4e4;
+    border-radius: var(--border-radius);
+    grid-template-rows: 2fr, 1fr;
+    margin:12px;
+    place-content: center;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 5px #6f7280;
+    transform: scale(1.1);
+}
+.avatar {
+    position: relative;
+    background: #ffffff;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.text {
+    text-align: center;
+    color:#2D3142;
+    gap: 4px;
+}
+.card.sun {
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/3; 
+}
+
+.sun .avatar{
+    background: radial-gradient(circle, #ff9c08, #f8560b);
+    width: 12em;
+    height: 12em;
+}
+
+.sun h3{
+    font-size: 3em;
+}
+
+.Mercury .avatar{
+    background: radial-gradient(circle, #bdbdbd, #8491a0);
+}
+
+.Venus .avatar{
+    background: radial-gradient(circle, #f8da32, #f79b5d, #fc9a2a);
+}
+
+.Earth .avatar{
+    background: radial-gradient(circle, #0f961a, #3090df);
+}
+.Mars .avatar{
+    background: radial-gradient(circle, #dfc181, #ce9d35);
+}
+
+.Jupiter .avatar{
+    background:repeating-linear-gradient(#d8dff0, #d4be7f  15%, #c5d5fa 30%);
+}
+
+.Saturn .avatar{
+    background:repeating-linear-gradient(#e6d5b9, #d4be7f  20%, #fae5bf 40%);
+}
+
+.Uranus .avatar{
+    background: radial-gradient(circle, #b3eff7, #68deee);
+}
+
+
+.Neptune .avatar{
+    background: radial-gradient(circle, #0145d8, #5d87fa);
+}
+
+/*:root {
+    --avart-size: 80px
+}
+
 body {
     font-family: Helvetica, sans-serif;
     color: #EAE8FF;
@@ -16,43 +118,48 @@ h1 {
     --padding: 24px;
     padding: var(--padding);
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows:repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
     background: #f5bcbc;
     gap: 36px;
     border-radius: 15px;
+    margin-bottom: 80px;
 }
 
 
 .card {
     display: grid;
     background: #a3a3a3;
-    grid-template-rows:repeat(3, 1fr);
     place-content: center; 
     padding-top: 20px;
     width :10em;
     height: 16em;
     border-radius: 5%;
+
 }
 
+
 .card.sun {
+    display: grid;
+    grid-template-rows: var(--avart-size) auto auto;
     grid-column: 1/3;
     grid-row: 1/3; 
+    
+
 }
 
 .avatar {
     background: #ffffff;
+    grid-row: 1/2;
     width :6em;
     height: 6em;
     border-radius: 50%;
     place-content: center;
-    grid-row: 1/2;
-
 }
 
 .text {
     text-align: center;
     color:#2D3142;
-    grid-row: 3;
+    
     gap: 4px;
 
 }
@@ -65,3 +172,4 @@ h3 {
 p {
     font-size: 1em;
 }
+*/
